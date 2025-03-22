@@ -8,26 +8,50 @@ export default function App() {
     {
       title: "Tuto Cuisine Express",
       description: "Découvrez la recette rapide avec ce robot multifonction.",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?fit=crop&w=400&h=250&q=80",
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      image: "https://source.unsplash.com/400x250/?cooking,kitchen",
+      video: "https://www.youtube.com/embed/1dH0T-0tJ74"
     },
     {
       title: "Mini-Doc Beauté",
       description: "L’histoire du parfum français à travers les âges.",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?fit=crop&w=400&h=250&q=80",
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      image: "https://source.unsplash.com/400x250/?beauty,perfume",
+      video: "https://www.youtube.com/embed/lQKi06z-u_s"
     },
     {
       title: "Clip Pop Jeune Talent",
-      description: "Un nouvel artiste à découvrir, en partenariat avec SoundSpot.",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?fit=crop&w=400&h=250&q=80",
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      description: "Un nouvel artiste à découvrir avec SoundSpot.",
+      image: "https://source.unsplash.com/400x250/?music,concert",
+      video: "https://www.youtube.com/embed/NpEaa2P7qZI"
     },
     {
       title: "Conseils Tech Influenceur",
       description: "Astuce rapide pour booster ton setup gaming !",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?fit=crop&w=400&h=250&q=80",
-      video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+      image: "https://source.unsplash.com/400x250/?gaming,setup",
+      video: "https://www.youtube.com/embed/x4WjC6epHYc"
+    },
+    {
+      title: "Workout Flash",
+      description: "15 min d'entraînement intense à la maison.",
+      image: "https://source.unsplash.com/400x250/?fitness,workout",
+      video: "https://www.youtube.com/embed/VHyGqsPOUHs"
+    },
+    {
+      title: "Mode Durable",
+      description: "Découvrez la tendance éthique du moment.",
+      image: "https://source.unsplash.com/400x250/?fashion,eco",
+      video: "https://www.youtube.com/embed/H1IYB9B4r7U"
+    },
+    {
+      title: "Smartphone 2025",
+      description: "La nouvelle génération de mobile est là.",
+      image: "https://source.unsplash.com/400x250/?smartphone,tech",
+      video: "https://www.youtube.com/embed/h2YfpKXjwrM"
+    },
+    {
+      title: "Voyage Virtuel",
+      description: "Explorez des destinations depuis votre salon.",
+      image: "https://source.unsplash.com/400x250/?travel,virtual",
+      video: "https://www.youtube.com/embed/wF4cT9bYcO8"
     },
   ];
 
@@ -57,16 +81,16 @@ export default function App() {
       )}
 
       <h1 className="text-2xl font-bold mb-4">Vos contenus sponsorisés personnalisés</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {ads.map((ad, index) => (
           <div key={index} className="rounded-2xl shadow-md overflow-hidden bg-white">
-            <img src={ad.image} alt={ad.title} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <h2 className="text-lg font-semibold mb-1">{ad.title}</h2>
-              <p className="text-sm text-gray-600 mb-2">{ad.description}</p>
+            <img src={ad.image} alt={ad.title} className="w-full h-32 object-cover" />
+            <div className="p-3">
+              <h2 className="text-sm font-semibold mb-1">{ad.title}</h2>
+              <p className="text-xs text-gray-600 mb-2">{ad.description}</p>
               <button
                 onClick={() => setVideoUrl(ad.video)}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium px-2 py-1 rounded"
               >
                 ▶ Regarder maintenant
               </button>
